@@ -2,8 +2,8 @@
 sudo dkpg --add-architecture i386
 sudo apt update
 sudo apt upgrade
-sudo apt-get install wine --fix-missing
-sudo apt-get install wine32 --fix-missing
+sudo apt-get install wine --fix-missing -y
+sudo apt-get install wine32 --fix-missing -y
 mkdir ~/autosim
 WINE_PREFIX=~/autosim WINEARCH=win32 wine regedit config.reg
 wget $(cat link.txt) -O ~/autosim/as.zip
